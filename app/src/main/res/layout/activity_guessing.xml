@@ -30,7 +30,8 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/checkBtn"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:id="@+id/checkBtn"

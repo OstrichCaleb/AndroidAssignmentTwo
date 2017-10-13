@@ -3,6 +3,7 @@ package com.example.ostri.androidassignmenttwo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,7 +38,7 @@ public class GuessingActivity extends AppCompatActivity {
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(numEntry.getText() == null) {
+                if(numEntry.getText().toString().isEmpty()) {
                     displayToast("Please enter a number");
                 } else {
                     response = number.checkGuess(Integer.parseInt(numEntry.getText().toString()));
