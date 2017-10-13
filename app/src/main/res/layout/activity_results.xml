@@ -12,22 +12,35 @@
         android:layout_height="wrap_content"
         android:text="It took you this many gueses:"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="101dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="101dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ansText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="number of guesses"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="179dp" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="59dp"
+        app:layout_constraintTop_toBottomOf="@+id/headerText"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/headerText" />
 
     <Button
         android:id="@+id/againBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PLAY AGAIN"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="447dp" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 </android.support.constraint.ConstraintLayout>

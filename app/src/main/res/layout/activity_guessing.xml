@@ -12,8 +12,12 @@
         android:layout_height="wrap_content"
         android:text="Guess a number between 1 and 20"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/numEntry"
@@ -22,14 +26,21 @@
         android:ems="10"
         android:hint="Enter a number"
         android:inputType="number"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="97dp" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkBtn"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/checkBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Check"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="97dp" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="97dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/numEntry" />
 </android.support.constraint.ConstraintLayout>
