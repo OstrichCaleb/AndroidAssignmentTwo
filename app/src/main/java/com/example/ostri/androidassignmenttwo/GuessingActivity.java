@@ -81,6 +81,7 @@ public class GuessingActivity extends AppCompatActivity {
             if (this.range < 2){
                 displayToast("Sorry, but you can't have it that easy!");
                 this.range = 20;
+                this.strRange = "20";
             }
         }
     }
