@@ -78,6 +78,10 @@ public class GuessingActivity extends AppCompatActivity {
         if(getIntent().hasExtra(LandingActivity.intentTag)){
             this.strRange = getIntent().getStringExtra(LandingActivity.intentTag);
             this.range = Integer.parseInt(strRange);
+            if (this.range < 2){
+                displayToast("Sorry, but you can't have it that easy!");
+                this.range = 20;
+            }
         }
     }
 }
