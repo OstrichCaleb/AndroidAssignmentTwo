@@ -7,7 +7,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class GuessingActivity extends AppCompatActivity {
     public static String intentTag = "inputData";
@@ -18,12 +21,19 @@ public class GuessingActivity extends AppCompatActivity {
     String response;
     Integer numGuesses;
     String guesses;
+    Integer range;
+    String strRange;
+    TextView promptText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guessing);
-        number = new NumberChecker();
+
+        getIntentData();
+
+        number = new NumberChecker((int)range);
+
         locateViews();
 
         bindFunctionality();
@@ -32,9 +42,11 @@ public class GuessingActivity extends AppCompatActivity {
     void locateViews(){
         checkBtn = (Button) findViewById(R.id.checkBtn);
         numEntry = (EditText) findViewById(R.id.numEntry);
+        promptText = (TextView) findViewById(R.id.promptText);
     }
 
     void bindFunctionality() {
+        promptText.setText("Guess a number between 1 and " + strRange);
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,5 +72,12 @@ public class GuessingActivity extends AppCompatActivity {
 
     private void displayToast(String msg){
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    void getIntentData(){
+        if(getIntent().hasExtra(LandingActivity.intentTag)){
+            this.strRange = getIntent().getStringExtra(LandingActivity.intentTag);
+            this.range = Integer.parseInt(strRange);
+        }
     }
 }

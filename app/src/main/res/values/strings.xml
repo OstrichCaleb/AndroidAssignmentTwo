@@ -2,4 +2,6 @@
     <string name="app_name">AndroidAssignmentTwo</string>
     <string name="start_game">Start Game</string>
     <string name="welcome_to_number_guess">Welcome to Number Guess!</string>
+    <string name="_0">0 - ?</string>
+    <string name="string_0" />
 </resources>
